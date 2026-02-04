@@ -42,7 +42,7 @@ The system is built as an **MCP Host** that connects to specialized **MCP Server
 
 **Code snippet**
 
-```
+```mermaid
 graph TD
     subgraph "Core Orchestrator (MCP Host)"
         Planner[Planner Agent]
