@@ -1,10 +1,3 @@
-<!--
-Task 1 — Research / Analysis
-Generated for: Project Chimera
-Purpose: Synthesize internal SRS with external research (a16z, OpenClaw/Moltbook)
-Author: Principal AI Architect (generated)
--->
-
 
 **# Task 1 — Research & Analysis: Project Chimera
 
