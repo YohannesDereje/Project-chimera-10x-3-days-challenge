@@ -1,12 +1,53 @@
-   {
-   "servers": {
-       "tenxfeedbackanalytics": {
-           "url": "https://mcppulse.10academy.org/proxy",
-           "type": "http",
-          "headers": {
-                 "X-Device": "windows",
-                 "X-Coding-Tool": "vscode"
-               }
-       }
-   },
-   "inputs": []}
+{
+    "servers": {
+        "tenxfeedbackanalytics": {
+            "url": "https://mcppulse.10academy.org/proxy",
+            "type": "http",
+            "headers": {
+                "X-Device": "windows",
+                "X-Coding-Tool": "vscode"
+            }
+        }
+    },
+    "mcp_servers": [
+        {
+            "id": "filesystem.local",
+            "module": "@modelcontextprotocol/server-filesystem",
+            "transport": "stdio",
+            "startCommand": ["uvx", "-m", "modelcontextprotocol.server_filesystem", "--stdio", "--root", "./"],
+            "root": "./",
+            "policy": {
+                "allow_write": true,
+                "audit_channel": "mcp://audit/filesystem"
+            }
+        },
+        {
+            "id": "git.local",
+            "module": "mcp-server-git",
+            "transport": "stdio",
+            "startCommand": ["npx", "mcp-server-git", "--stdio", "--repo", "./"],
+            "repository_root": "./",
+            "policy": {
+                "require_review": true,
+                "audit_channel": "mcp://audit/git",
+                "commit_signature": "agent"
+            }
+        },
+        {
+            "id": "seqproc.local",
+            "module": "@modelcontextprotocol/server-sequential-process",
+            "transport": "stdio",
+            "startCommand": ["uvx", "-m", "modelcontextprotocol.server_sequential_process", "--stdio"],
+            "sandbox": {
+                "cpu_quota": "2",
+                "memory_mb": 2048,
+                "allow_network": false
+            },
+            "policy": {
+                "audit_channel": "mcp://audit/seqproc",
+                "require_conformance": true
+            }
+        }
+    ],
+    "inputs": []
+}
