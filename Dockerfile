@@ -38,8 +38,8 @@ RUN set -eux; \
     # Install the project and its dependencies system-wide so the interpreter
     # used is the system python (avoids uv-managed root-owned interpreter).
     python3 -m pip install --no-cache-dir -e .; \
-    # Install test dependencies so pytest is available in the image
-    python3 -m pip install --no-cache-dir pytest pytest-asyncio; \
+    # Install test and CI tooling so pytest/lint/security run in the image
+    python3 -m pip install --no-cache-dir pytest pytest-asyncio ruff bandit; \
     chown -R chimera:chimera /app
 
 # Run as non-root for improved security (after installs and chown)

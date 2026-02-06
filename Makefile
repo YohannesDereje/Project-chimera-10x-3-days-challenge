@@ -1,12 +1,11 @@
-.PHONY: setup test docker-build docker-test spec-check
+.PHONY: setup test docker-build docker-test lint security spec-check
 
 setup:
 	@echo "Running uv sync to install dependencies from pyproject.toml..."
 	uv sync --project .
 
-test:
-	@echo "Running pytest on /tests..."
-	uv run pytest tests -q
+test: docker-build docker-test
+	@echo "Running pytest on /tests via Docker..."
 
 docker-build:
 	@echo "Building Docker image project-chimera:latest..."
@@ -15,6 +14,14 @@ docker-build:
 docker-test:
 	@echo "Running pytest inside Docker container against /tests..."
 	docker run --rm project-chimera:latest pytest tests -q
+
+lint: docker-build
+	@echo "Running lint checks inside Docker container..."
+	docker run --rm project-chimera:latest ruff check .
+
+security: docker-build
+	@echo "Running security checks inside Docker container..."
+	docker run --rm project-chimera:latest bandit -r src
 
 spec-check:
 	@echo "Spec-Check: verifying core spec files are present..."

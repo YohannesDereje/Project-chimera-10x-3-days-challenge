@@ -15,7 +15,8 @@ jobs:
       - name: "Set up Docker"
         uses: docker/setup-buildx-action@v3
 
-      - name: "Build and run tests in container"
+      - name: "Run CI safety gate"
         run: |
-          docker build -t project-chimera .
-          docker run --rm project-chimera pytest tests/
+          make lint
+          make security
+          make test

@@ -1,0 +1,12 @@
+Project Chimera — Agent Rules
+
+Prime Directive:
+- NEVER generate code without checking specs/ first.
+
+Workflow:
+- Explain your plan before writing code.
+- Cite the governing spec section for any implementation decision.
+
+Governance:
+- All external I/O must go through MCP servers.
+- Enforce the Symbolic Guardian gate before side effects.
