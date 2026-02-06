@@ -1,0 +1,22 @@
+language: "en"
+
+review:
+  auto_review:
+    enabled: true
+
+  instructions:
+    - "Verify spec alignment: changes must be consistent with the canonical specs under .specify/specs/."
+    - "Flag any potential security vulnerabilities (input validation, authz/authn, secrets, dependency risks)."
+    - "Call out changes that weaken tests or reduce safety checks."
+
+  path_filters:
+    include:
+      - "**/*.py"
+      - "**/*.md"
+      - "Dockerfile"
+      - "Makefile"
+      - ".github/workflows/*.yml"
+    exclude:
+      - "**/dist/**"
+      - "**/build/**"
+      - "**/.venv/**"
