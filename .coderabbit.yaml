@@ -4,9 +4,12 @@ review:
   auto_review:
     enabled: true
 
+  tone: "Professional, skeptical, and detail-oriented"
+
   instructions:
-    - "Verify spec alignment: changes must be consistent with the canonical specs under .specify/specs/."
-    - "Flag any potential security vulnerabilities (input validation, authz/authn, secrets, dependency risks)."
+    - "Spec Alignment: Cross-reference any code changes against the specs/ folder. If a function doesn't match technical.md, it must be flagged."
+    - "Security Focus: Look for leaky AI patterns such as hardcoded API keys or unvalidated user inputs, and flag them."
+    - "Governance Rule: Provide a Compliance Score (1-10) based on how well the code follows our defined architecture."
     - "Call out changes that weaken tests or reduce safety checks."
 
   path_filters:
