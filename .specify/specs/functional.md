@@ -1,9 +1,15 @@
 <!--
-  specs/functional.md
-  Deep functional user stories and acceptance criteria for the Chimera Swarm
-  Referenced: SRS.md, research_analysis.md, architecture_strategy.md
+  Wrapped Spec Kit file: .specify/specs/functional.md
+  Migrated from specs/functional.md — content preserved.
 -->
 
+# Feature Specification: Functional — Swarm Architecture
+
+**Feature Branch**: `[migration/specs-into-spec-kit]`
+**Created**: 2026-02-06
+**Status**: Canonical (migrated)
+
+```markdown
 Functional Specifications — Swarm Architecture
 Version: 2026-02-05
 
@@ -100,3 +106,4 @@ References
 - See Architecture Strategy: research/architecture_strategy.md
 
 -- End of `specs/functional.md`
+```

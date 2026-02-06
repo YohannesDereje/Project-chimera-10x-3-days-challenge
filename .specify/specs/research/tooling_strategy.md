@@ -1,4 +1,16 @@
 <!--
+  Wrapped Spec Kit file: .specify/specs/research/tooling_strategy.md
+  Migrated from research/tooling_strategy.md — content preserved.
+-->
+
+# Feature Specification: Developer Tooling Strategy — MCP Stack
+
+**Feature Branch**: `[migration/specs-into-spec-kit]`
+**Created**: 2026-02-06
+**Status**: Canonical (migrated)
+
+```markdown
+<!--
   research/tooling_strategy.md
   Developer MCP Stack and guidance for Project Chimera
   References: Important docs/docs/SRS.md, research/architecture_strategy.md, research/research_analysis.md, specs/_meta.md
@@ -10,7 +22,7 @@ Version: 2026-02-05
 
 Purpose
 -------
-This document defines the Developer MCP Stack used to operate, test, and maintain Project Chimera code and infrastructure. The stack is selected to satisfy the project's high-governance requirements (traceability, auditable change control, sandboxed execution) as described in `specs/_meta.md`, the Swarm Architecture in `Important docs/docs/SRS.md`, and the integration constraints in `research/architecture_strategy.md` and `research/research_analysis.md`.
+This document defines the Developer MCP Stack used to operate, test, and maintain Project Chimera code and infrastructure. The stack is selected to satisfy the project's high-governance requirements (traceability, auditable change control, sandboxed execution) as described in `.specify/specs/_meta.md`, the Swarm Architecture in `Important docs/docs/SRS.md`, and the integration constraints in `research/architecture_strategy.md` and `research/research_analysis.md`.
 
 Goals
 -----
@@ -93,7 +105,7 @@ Config Snippet (`.vscode/mcp.json`)
 
 Operational notes
 :
-- Agent-initiated commits must include a `commit_signature` metadata field. Any commit that changes `specs/_meta.md`, `SOUL.md`, or policy files must trigger an automated policy regression test and block merge until human approval.
+- Agent-initiated commits must include a `commit_signature` metadata field. Any commit that changes `.specify/specs/_meta.md`, `SOUL.md`, or policy files must trigger an automated policy regression test and block merge until human approval.
 
 3) @modelcontextprotocol/server-sequential-process
 -------------------------------------------------
@@ -137,7 +149,7 @@ Operational notes
 
 Governance Alignment
 --------------------
-This Developer MCP Stack enforces the project's governance in `specs/_meta.md` by:
+This Developer MCP Stack enforces the project's governance in `.specify/specs/_meta.md` by:
 
 - Centralizing I/O through MCP servers to prevent direct, ad-hoc access to production APIs and secrets.
 - Requiring audit channels for filesystem, git, and process operations so Evidence Packets can be assembled for every developer action.
@@ -154,6 +166,7 @@ References
 - `Important docs/docs/SRS.md` — Swarm architecture and governance
 - `research/architecture_strategy.md` — Polyglot persistence and orchestration
 - `research/research_analysis.md` — Agent social network considerations
-- `specs/_meta.md` — Governance mandates and acceptance criteria
+- `.specify/specs/_meta.md` — Governance mandates and acceptance criteria
 
 -- End of `research/tooling_strategy.md`
+```

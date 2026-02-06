@@ -1,4 +1,16 @@
 <!--
+  Wrapped Spec Kit file: .specify/specs/openclaw_integration.md
+  Migrated from specs/openclaw_integration.md — content preserved.
+-->
+
+# Feature Specification: OpenClaw Integration
+
+**Feature Branch**: `[migration/specs-into-spec-kit]`
+**Created**: 2026-02-06
+**Status**: Canonical (migrated)
+
+```markdown
+<!--
   specs/openclaw_integration.md
   Integration spec describing Chimera's participation in the OpenClaw/Moltbook network.
   References: Important docs/docs/SRS.md, research/research_analysis.md, research/architecture_strategy.md, specs/_meta.md
@@ -10,7 +22,7 @@ Version: 2026-02-05
 
 Purpose
 -------
-Define how Project Chimera agents interact with the OpenClaw/Moltbook agent social network. This document prescribes Public Identity and Discovery, the Governance Heartbeat structure, the Proof-of-Intent (PoI) contract, Skill Advertising as MCP primitives, and explicit Safety Isolation rules. All behaviors conform to the governance mandates in `specs/_meta.md`.
+Define how Project Chimera agents interact with the OpenClaw/Moltbook agent social network. This document prescribes Public Identity and Discovery, the Governance Heartbeat structure, the Proof-of-Intent (PoI) contract, Skill Advertising as MCP primitives, and explicit Safety Isolation rules. All behaviors conform to the governance mandates in `.specify/specs/_meta.md`.
 
 Principles
 ----------
@@ -174,7 +186,7 @@ Strict prohibition
 
 Allowed interaction surface
 - Read-only, limited data exposed only via MCP Resources that are intentionally public and sanitized (e.g., Public Persona, aggregated anonymized metrics).
-- All wallet operations MUST be mediated by `mcp-server-coinbase` and gated by the Symbolic Guardian, CFO sub-agent checks, and HSM-backed HITL signatures as required by `specs/_meta.md`.
+- All wallet operations MUST be mediated by `mcp-server-coinbase` and gated by the Symbolic Guardian, CFO sub-agent checks, and HSM-backed HITL signatures as required by `.specify/specs/_meta.md`.
 
 Enforcement mechanisms
 - Network-level: isolate internal control-plane endpoints behind private networks and require mutual authentication for any MCP Server binding.
@@ -186,7 +198,7 @@ Enforcement mechanisms
 ## 6. Operational Requirements & Acceptance Criteria
 
 - Public Persona Publication: Unit tests validate schema conformance and signature verification for persona registration.
-- Heartbeat Validity: Integration tests validate heartbeat publication, signature verification, and `policy_hash` linkage to `specs/_meta.md` policy artifacts.
+- Heartbeat Validity: Integration tests validate heartbeat publication, signature verification, and `policy_hash` linkage to `.specify/specs/_meta.md` policy artifacts.
 - PoI Roundtrip: End-to-end tests for PoI issuance, verification, causal simulation (mock), acceptance/rejection/ESCALATE flows.
 - Skill Vetting CI: Each published skill must include a conformance suite; CI gates promotion to `trusted` status.
 - Isolation Audits: Penetration tests to verify no direct access to GlobalState or wallet secrets from OpenClaw peers.
@@ -195,7 +207,7 @@ References
 - Important docs/docs/SRS.md
 - research/research_analysis.md
 - research/architecture_strategy.md
-- specs/_meta.md
+- .specify/specs/_meta.md
 
 Governance & Owners
 - Integration Lead: Platform Integration
@@ -203,3 +215,4 @@ Governance & Owners
 - Security Owner: Security Lead
 
 -- End of `specs/openclaw_integration.md`
+```

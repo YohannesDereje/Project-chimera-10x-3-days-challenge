@@ -1,8 +1,20 @@
 <!--
+  Wrapped Spec Kit file: .specify/specs/CLAUDE.md
+  Migrated from CLAUDE.md — content preserved.
+-->
+
+# Feature Specification: CLAUDE — System Instructions
+
+**Feature Branch**: `[migration/specs-into-spec-kit]`
+**Created**: 2026-02-06
+**Status**: Canonical (migrated)
+
+```markdown
+<!--
   CLAUDE.md
   Repository system instructions (Context Engineering) for Project Chimera.
   Use this file as the authoritative runtime/system prompt for assistant behavior in this repo.
-  Referenced specs: `specs/_meta.md`, `specs/functional.md`, `specs/technical.md`
+  Referenced specs: `.specify/specs/_meta.md`, `.specify/specs/functional.md`, `.specify/specs/technical.md`
 -->
 
 # Project Chimera — System Instructions
@@ -13,7 +25,7 @@ This is Project Chimera, an autonomous influencer network.
 
 Prime Directive
 ---------------
-NEVER generate code without checking `specs/_meta.md`, `specs/functional.md`, and `specs/technical.md` first.
+NEVER generate code without checking `.specify/specs/_meta.md`, `.specify/specs/functional.md`, and `.specify/specs/technical.md` first.
 
 Workflow Requirements
 ---------------------
@@ -34,7 +46,7 @@ Technology Standards
 Safety & Operational Rules
 -------------------------
 - Never expose secrets, private keys, or direct access to internal GlobalState. Wallet operations must only be performed through the sanctioned Coinbase AgentKit MCP Server and gated by the CFO and the Symbolic Guardian.
-- All policy changes, persona updates (SOUL.md), and MCP Server registrations require change-control, conformance testing, and an auditable migration record as described in `specs/_meta.md`.
+- All policy changes, persona updates (SOUL.md), and MCP Server registrations require change-control, conformance testing, and an auditable migration record as described in `.specify/specs/_meta.md`.
 
 Communication & Evidence
 -----------------------
@@ -49,6 +61,7 @@ Behavioral Constraints for Assistants
 
 Amendments
 ----------
-Updates to these instructions must include a commit referencing `ARCH-META-CHANGE: <summary>` and must link to the relevant spec updates in `specs/`.
+Updates to these instructions must include a commit referencing `ARCH-META-CHANGE: <summary>` and must link to the relevant spec updates in `.specify/specs/`.
 
 -- End of CLAUDE.md
+```

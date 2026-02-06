@@ -1,3 +1,11 @@
+<!--
+  Wrapped Spec Kit file: .specify/specs/skills/media_downloader/README.md
+  Migrated from skills/media_downloader/README.md — content preserved.
+-->
+
+# Media Downloader Skill
+
+```markdown
 # Media Downloader Skill
 
 Description
@@ -58,3 +66,4 @@ References
 - research/architecture_strategy.md
 
 -- End of Media Downloader
+```

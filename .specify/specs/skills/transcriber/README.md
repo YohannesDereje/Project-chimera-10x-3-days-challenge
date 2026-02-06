@@ -1,3 +1,11 @@
+<!--
+  Wrapped Spec Kit file: .specify/specs/skills/transcriber/README.md
+  Migrated from skills/transcriber/README.md — content preserved.
+-->
+
+# Transcriber Skill
+
+```markdown
 # Transcriber Skill
 
 Description
@@ -48,13 +56,14 @@ Dependency List
 
 Governance & Notes
 ------------------
-- Transcription must not expose private content; any PII detected should be marked and routed to HITL per `specs/functional.md` sensitivity rules.
+- Transcription must not expose private content; any PII detected should be marked and routed to HITL per `.specify/specs/functional.md` sensitivity rules.
 - Results must be stored in semantic memory (Weaviate) with provenance metadata.
 
 References
 ----------
 - Important docs/docs/SRS.md
 - research/research_analysis.md
-- specs/functional.md
+- .specify/specs/functional.md
 
 -- End of Transcriber
+```

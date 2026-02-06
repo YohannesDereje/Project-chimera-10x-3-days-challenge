@@ -1,3 +1,11 @@
+<!--
+  Wrapped Spec Kit file: .specify/specs/skills/trend_analyzer/README.md
+  Migrated from skills/trend_analyzer/README.md — content preserved.
+-->
+
+# Trend Analyzer Skill
+
+```markdown
 # Trend Analyzer Skill
 
 Description
@@ -56,7 +64,7 @@ Dependency List
 
 Governance & Notes
 ------------------
-- Inputs and outputs conform to the Neuro‑Symbolic standards in `specs/_meta.md` — every output must include `causal_hypotheses` and a normalized `risk_score`.
+- Inputs and outputs conform to the Neuro‑Symbolic standards in `.specify/specs/_meta.md` — every output must include `causal_hypotheses` and a normalized `risk_score`.
 - All external I/O must use MCP Tools and be logged to the audit ledger.
 
 References
@@ -66,3 +74,4 @@ References
 - research/research_analysis.md
 
 -- End of Trend Analyzer
+```

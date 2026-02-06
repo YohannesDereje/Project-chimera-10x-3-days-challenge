@@ -1,4 +1,16 @@
 <!--
+  Wrapped Spec Kit file: .specify/specs/technical.md
+  Migrated from specs/technical.md — content preserved.
+-->
+
+# Feature Specification: Technical — NSC Blueprint
+
+**Feature Branch**: `[migration/specs-into-spec-kit]`
+**Created**: 2026-02-06
+**Status**: Canonical (migrated)
+
+```markdown
+<!--
   specs/technical.md
   Technical blueprint for Neuro-Symbolic-Causal substrate, data model, API contracts, and Symbolic Guardian logic.
   References: Important docs/docs/SRS.md, research/architecture_strategy.md, research/research_analysis.md
@@ -269,3 +281,4 @@ References
 - research/research_analysis.md
 
 -- End of `specs/technical.md`
+```

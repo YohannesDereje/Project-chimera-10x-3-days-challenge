@@ -1,3 +1,15 @@
+<!--
+  Wrapped Spec Kit file: .specify/specs/_meta.md
+  Migrated from specs/_meta.md — content preserved.
+-->
+
+# Feature Specification: Spec Meta (Project Chimera)
+
+**Feature Branch**: `[migration/specs-into-spec-kit]`
+**Created**: 2026-02-06
+**Status**: Canonical (migrated)
+
+```markdown
 Project Chimera — Specification Meta (Source of Truth)
 Version: 2026-02-05
 
@@ -92,3 +104,5 @@ Fail-Safe Defaults: In the event of Guardian failure, the system mode SHALL be s
 Any amendment must include the following metadata in the commit message: ARCH-META-CHANGE: <summary>.
 
 -- End of Specification Meta --
+
+```
